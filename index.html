@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enfoque 360 - tu portal de Noticias</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="header-container">
+            <div class="date-badge">Edición Digital • Santa Fe</div>
+            
+            <!-- Contenedor del Logo de la Página -->
+            <div class="brand-container">
+                <img src="logo.png" alt="Enfoque 360 Noticias" class="site-logo">
+                <h1 class="site-title">Enfoque 360</h1>
+            </div>
+
+            <!-- Navegación -->
+            <nav class="nav">
+                <a href="#heidi">Heidi Klum</a>
+                <a href="#victoria">Victoria's Secret</a>
+                <a href="#entrevistas">Entrevistas</a>
+                <a href="#marcha">Marcha Universitaria</a>
+                <a href="#israel">Israel</a>
+                <a href="#santafe">Santa Fe</a>
+                <a href="#juego" class="nav-juego">Sopa de Letras</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+
+        <!-- Grid de Noticias Principales -->
+        <section class="news-grid">
+
+            <!-- Noticia 1: Heidi Klum -->
+            <article class="card" id="heidi">
+                <div class="card-img-wrapper">
+                    <img src="heidi-mano.jpg" alt="Disfraz de mano gigante de Heidi Klum">
+                    <span class="tag tag-rose">Espectáculo Mundial</span>
+                </div>
+                <div class="card-body">
+                    <h2>¡Heidi Klum volvió a sorprender con su disfraz más extravagante de Halloween!</h2>
+                    <p>La modelo alemana celebró su tradicional fiesta de Halloween transformándose en una enorme mano humana con uñas rojas y anillo de casamiento.</p>
+                    <button class="btn btn-rose" onclick="openModal('modal-heidi')">Leer nota completa</button>
+                </div>
+            </article>
+
+            <!-- Noticia 2: Victoria's Secret (CON VIDEO DEBUT DE KYLIE JENNER) -->
+            <article class="card" id="victoria">
+                <!-- VIDEO DE VICTORIA'S SECRET -->
+                <div class="card-video-wrapper">
+                    <iframe src="https://youtu.be/5KqyJk1hurU?si=M0no7ZKcX41DTfWS" title="Video Kylie Jenner Victoria's Secret" allowfullscreen></iframe>
+                </div>
+                <div class="card-body">
+                    <span class="tag tag-rose tag-inline">Moda & Espectáculo</span>
+                    <h2>¡Los ángeles volvieron a la pasarela! El desfile de Victoria's Secret sorprendió al mundo</h2>
+                    <p>La reconocida marca presentó su esperado desfile en Los Ángeles con la participación de modelos reconocidas y el debut de Kylie Jenner.</p>
+                    <button class="btn btn-rose" onclick="openModal('modal-victoria')">Leer nota completa</button>
+                </div>
+            </article>
+
+            <!-- Noticia 3: Marcha Universitaria -->
+            <article class="card" id="marcha">
+                <div class="card-img-wrapper">
+                    <img src="marcha-universitaria.jpg" alt="Marcha Universitaria en Argentina">
+                    <span class="tag tag-green">Noticia Nacional</span>
+                </div>
+                <div class="card-body">
+                    <h2>La marcha universitaria de octubre en Argentina</h2>
+                    <p>Estudiantes, docentes y trabajadores se manifestaron en defensa de la educación pública y la Ley de Financiamiento Universitario.</p>
+                    <button class="btn btn-green" onclick="openModal('modal-marcha')">Leer nota completa</button>
+                </div>
+            </article>
+
+            <!-- Noticia 4: Elecciones Israel -->
+            <article class="card" id="israel">
+                <div class="card-img-wrapper">
+                    <img src="elecciones-israel.jpg" alt="Urna de Elecciones de Israel">
+                    <span class="tag tag-green">Noticia Mundial</span>
+                </div>
+                <div class="card-body">
+                    <h2>Las elecciones de Israel de 2026</h2>
+                    <p>Los ciudadanos votaron para elegir a los 120 integrantes de la Knéset en una jornada marcada por debates de seguridad y política interna.</p>
+                    <button class="btn btn-green" onclick="openModal('modal-israel')">Leer nota completa</button>
+                </div>
+            </article>
+
+            <!-- Noticia 5: Eventos en Santa Fe -->
+            <article class="card" id="santafe">
+                <div class="card-img-wrapper">
+                    <img src="noche-museos-santafe.jpg" alt="Noche de los Museos en Santa Fe">
+                    <span class="tag tag-green">Eventos en Santa Fe</span>
+                </div>
+                <div class="card-body">
+                    <h2>Una noche para descubrir Santa Fe: vuelve la magia de los museos</h2>
+                    <p>Más de 100 espacios culturales abrieron sus puertas en la Noche de los Museos. Además, la ciudad se llenó de música con el Festival Sonamos Latinoamérica.</p>
+                    <button class="btn btn-green" onclick="openModal('modal-santafe')">Leer nota completa</button>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- SECCIÓN DE ENTREVISTAS (CON 2 VIDEOS) -->
+        <section class="interviews-section" id="entrevistas">
+            <div class="section-title-wrapper">
+                <span class="tag tag-rose">Videos Exclusivos</span>
+                <h2>Sección Entrevistas</h2>
+                <p>Charlas mano a mano y coberturas audiovisuales especiales de la edición de hoy.</p>
+            </div>
+
+            <div class="videos-grid">
+                <!-- Video 1 de Entrevista -->
+                <div class="video-card">
+                    <div class="card-video-wrapper">
+                        <!-- PEGAR EL LINK DEL PRIMER VIDEO DE ENTREVISTA -->
+                        <iframe src="https://youtu.be/9KJ-VWfPy24?feature=shared" title="Entrevista" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Entrevista Especial N° 1</h3>
+                        <p>Cobertura exclusiva y testimonios sobre la actualidad periodística.</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 de Entrevista -->
+                <div class="video-card">
+                    <div class="card-video-wrapper">
+                        <!-- PEGAR EL LINK DEL SEGUNDO VIDEO DE ENTREVISTA -->
+                        <iframe src="https://youtu.be/AZV9Axv4yK0?feature=shared" title="Victorias secret 2026" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Entrevista Especial N° 2</h3>
+                        <p>Diálogos y análisis en profundidad con los protagonistas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Juego: Sopa de Letras -->
+        <section class="game-section" id="juego">
+            <div class="game-header">
+                <h2>Sección de Entretenimiento: Sopa de Letras</h2>
+                <p>Encontrá las 5 palabras ocultas sobre las noticias del periódico de hoy.</p>
+            </div>
+
+            <div class="word-list" id="wordList">
+                <span class="word-chip" data-word="NOTICIA">NOTICIA</span>
+                <span class="word-chip" data-word="HEIDI">HEIDI</span>
+                <span class="word-chip" data-word="MODA">MODA</span>
+                <span class="word-chip" data-word="SANTAFE">SANTAFE</span>
+                <span class="word-chip" data-word="MARCHA">MARCHA</span>
+            </div>
+
+            <div class="grid-container" id="grid"></div>
+        </section>
+
+    </main>
+
+    <!-- Ventanas Modales con los Textos del Documento -->
+
+    <!-- Modal Heidi Klum -->
+    <div id="modal-heidi" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-heidi')">&times;</span>
+            <span class="tag tag-rose">Nota Novedosa del Espectáculo (Mundial)</span>
+            <h2 class="modal-title">¡Heidi Klum volvió a sorprender con su disfraz más extravagante de Halloween!</h2>
+            <img src="heidi-mano.jpg" alt="Disfraz de Heidi Klum" class="modal-img">
+            <p><strong>La modelo alemana celebró su tradicional fiesta de Halloween con un disfraz tan original como extraño: se transformó en una enorme mano humana.</strong></p>
+            <p>Como todos los años, Heidi Klum volvió a llamar la atención con su increíble elección para Halloween...</p>
+            <h3>Una tradición que nunca decepciona</h3>
+            <p>Esta fue la edición número 25 de su tradicional fiesta de Halloween...</p>
+            <h3>Halloween y el mundo de las celebridades</h3>
+            <p>Una vez más, Heidi Klum demonstrated que Halloween es una oportunidad para dejar volar la imaginación...</p>
+
+            <!-- ACÁ PEGAS EL CÓDIGO DEL LINK NUEVO -->
+            <hr class="modal-divider">
+            <p><strong>Enlace recomendado:</strong> <a href="https://youtu.be/U6JJRiw_dUc?si=zIpEWb2pMLpQgyhX" target="_blank" class="video-link">🔗 Hacé clic acá para ver más sobre el disfraz de Heidi Klum</a></p>
+
+        </div>
+    </div>
+
+    <!-- Modal Victoria's Secret -->
+    <div id="modal-victoria" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-victoria')">&times;</span>
+            <span class="tag tag-rose">Moda & Espectáculo</span>
+            <h2 class="modal-title">¡Los ángeles volvieron a la pasarela! El desfile de Victoria's Secret sorprendió al mundo</h2>
+            <img src="victoria-secret.jpg" alt="Victoria's Secret" class="modal-img">
+            <p><strong>La marca presentó su famoso desfile el 18 de octubre en Los Ángeles, con modelos reconocidas, vestuarios brillantes y presentaciones musicales que mezclaron moda y espectáculo.</strong></p>
+            <p>El mundo de la moda volvió a mirar hacia Victoria's Secret. El domingo 18 de octubre de 2026, la reconocida marca realizó su esperado desfile en Los Ángeles, Estados Unidos, con una puesta en escena inspirada en las cuatro estaciones del año.</p>
+            <h3>Un desfile lleno de sorpresas</h3>
+            <p>La pasarela contó con la participación de modelos reconocidas, como Adriana Lima, Gigi Hadid y Alessandra Ambrosio. Uno de los momentos más comentados fue la aparición de Kylie Jenner, quien debutó en la pasarela luciendo el famoso Fantasy Bra, una prenda especial de la marca.</p>
+            <p>Los diseños incluyeron alas gigantes, detalles metálicos, flores y elementos inspirados en el invierno. De esta forma, el espectáculo combinó la moda con una propuesta visual llena de creatividad.</p>
+            <h3>La música también fue protagonista</h3>
+            <p>El evento contó con presentaciones de artistas como Tate McRae, Megan Thee Stallion, Megan Moroney y KATSEYE. Sus actuaciones acompañaron los diferentes momentos del desfile y aportaron distintos estilos musicales al espectáculo.</p>
+            <h3>Mucho más que un desfile</h3>
+            <p>El regreso de las modelos históricas y la participación de nuevas figuras mostraron cómo Victoria's Secret busca combinar su estilo tradicional con propuestas actuales. El evento volvió a unir moda, música y cultura popular en una misma pasarela.</p>
+            <p>En conclusión el desfile de octubre fue uno de los acontecimientos destacados del mundo de la moda, tanto por sus diseños llamativos como por las celebridades que participaron.</p>
+        </div>
+    </div>
+
+    <!-- Modal Marcha Universitaria -->
+    <div id="modal-marcha" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-marcha')">&times;</span>
+            <span class="tag tag-green">Noticia a Nivel Nacional</span>
+            <h2 class="modal-title">La marcha universitaria de octubre en Argentina</h2>
+            <img src="marcha-universitaria.jpg" alt="Marcha Universitaria" class="modal-img">
+            <p>El 15 de octubre de 2026 se realizó la Quinta Marcha Federal Universitaria en distintas ciudades de Argentina. Participaron estudiantes, docentes, trabajadores universitarios y otras personas que se manifestaron en defensa de la educación pública.</p>
+            <p>El principal reclamo fue que el Gobierno nacional cumpliera con la Ley de Financiamiento Universitario, que busca garantizar los fondos necesarios para el funcionamiento de las universidades, los salarios de los trabajadores y las becas estudiantiles. También se reclamó una mejora en los recursos destinados a la educación y la investigación científica.</p>
+            <p>En Santa Fe, la movilización fue convocada por la Universidad Nacional del Litoral (UNL), la UTN y distintas organizaciones universitarias. La marcha mostró la preocupación de la comunidad educativa por la situación económica de las universidades públicas.</p>
+            <p>En conclusión esta movilización fue importante porque buscó defender el acceso a la educación pública y reclamar mejores condiciones para estudiantes y trabajadores. Además, demostró la importancia de la participación ciudadana para expresar demandas y defender derechos.</p>
+        </div>
+    </div>
+
+    <!-- Modal Elecciones Israel -->
+    <div id="modal-israel" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-israel')">&times;</span>
+            <span class="tag tag-green">Noticia a Nivel Mundial</span>
+            <h2 class="modal-title">Las elecciones de Israel de 2026</h2>
+            <img src="elecciones-israel.jpg" alt="Elecciones en Israel" class="modal-img">
+            <p>El 27 de octubre de 2026 se realizaron las elecciones parlamentarias de Israel, en las que los ciudadanos votaron para elegir a los 120 integrantes de la Knéset, el parlamento del país. Los principales protagonistas fueron Benjamin Netanyahu, del partido Likud, y Gadi Eisenkot, líder del partido Yashar.</p>
+            <p>Estas elecciones estuvieron marcadas por los conflictos en Medio Oriente, la seguridad del país y las críticas al gobierno por su manejo de los ataques del 7 de octubre de 2023. También se debatieron temas relacionados con el servicio militar y la situación económica y social.</p>
+            <p>Los primeros resultados no mostraron un ganador claro. Por eso, los partidos deben negociar para intentar formar un gobierno con el apoyo de la mayoría del parlamento. Estas elecciones son importantes porque las decisiones del nuevo gobierno pueden influir tanto en la política interna de Israel como en sus relaciones con otros países de la región.</p>
+            <p>Las elecciones de Israel de 2026 representan un momento importante para el futuro político del país, ya que reflejan las diferencias entre los partidos y los desafíos que enfrenta la sociedad israelí.</p>
+        </div>
+    </div>
+
+    <!-- Modal Santa Fe -->
+    <div id="modal-santafe" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-santafe')">&times;</span>
+            <span class="tag tag-green">Eventos en Santa Fe</span>
+            <h2 class="modal-title">Una noche para descubrir Santa Fe: vuelve la magia de los museos</h2>
+            <img src="noche-museos-santafe.jpg" alt="Noche de los Museos Santa Fe" class="modal-img">
+            <p><strong>Más de 100 espacios culturales abrieron sus puertas en una nueva edición de la Noche de los Museos, con propuestas gratuitas para disfrutar del arte, la historia y la cultura santafesina.</strong></p>
+            <p>El pasado sábado 24 de octubre, Santa Fe Capital vivió una nueva edición de la Noche de los Museos, uno de los acontecimientos culturales más importantes de la ciudad. Durante la jornada, vecinos y visitantes pudieron recorrer más de 100 museos, galerías de arte, edificios históricos y espacios culturales, con entrada libre y gratuita.</p>
+            <p>La propuesta contó con actividades para todos los gustos y edades. Hubo exposiciones artísticas, visitas guiadas, espectáculos musicales, teatro, actividades literarias y recorridos históricos. Además, los espacios se organizaron en siete paseos territoriales para facilitar los recorridos por diferentes sectores de la ciudad.</p>
+            <p>Entre las actividades destacadas se encontró una caminata desde el Faro de la Costanera Oeste hasta el Puente Colgante, acompañada por El Chimi Santafesino, donde los participantes pudieron conocer historias y curiosidades de la ciudad. También se realizó una visita especial al Teatro Municipal 1.º de Mayo, con un cierre musical.</p>
+            <p>Además de las propuestas culturales, se instalaron espacios gastronómicos en Plaza San Martín y el Paseo de las Tres Culturas, para que las personas pudieran disfrutar de algo para comer durante sus recorridos.</p>
+
+            <hr class="modal-divider">
+
+            <h2 class="modal-title">Santa Fe se llena de música con el Festival Internacional Sonamos Latinoamérica</h2>
+            <p><strong>Del 25 al 31 de octubre, la ciudad recibió una nueva edición de este encuentro musical que reunió artistas de distintos países, con conciertos gratuitos y actividades culturales para toda la comunidad.</strong></p>
+            <p>Santa Fe Capital fue escenario de la XXI edición del Festival Internacional Sonamos Latinoamérica, un evento que se desarrolló del 25 al 31 de octubre y reunió a músicos de diferentes partes de Latinoamérica y el mundo.</p>
+            <p>El festival, que nació en la ciudad de Santa Fe en 2006, tiene como objetivo difundir las músicas populares de distintos países, promover el intercambio cultural y acercar nuevas expresiones artísticas al público.</p>
+            <p>Durante esta edición participaron artistas de Argentina, Colombia, Brasil, Perú y Venezuela, entre otros lugares. Los espectáculos se realizaron en diferentes espacios culturales de la ciudad, como la Casa de la Cultura, el Centro Cultural Provincial, La Josefa Espacio Cultural y el Mercado Progreso. Además, las presentaciones fueron con entrada libre y gratuita.</p>
+            <p>Uno de los aspectos más destacados fue «Sonamos con los Chicos», una propuesta educativa que acercó la música latinoamericana a estudiantes de distintas escuelas mediante conciertos didácticos.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript Integrado -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+
+        // Lógica Sopa de Letras
+        const gridData = [
+            ['N','O','T','I','C','I','A','X','S'],
+            ['A','M','A','R','C','H','A','P','A'],
+            ['H','E','I','D','I','L','M','O','N'],
+            ['K','B','R','O','S','A','L','I','T'],
+            ['S','A','N','T','A','F','E','C','A'],
+            ['V','I','C','T','O','R','I','A','F'],
+            ['P','A','S','T','E','L','M','O','D'],
+            ['A','B','C','D','M','O','D','A','E']
+        ];
+
+        const words = ['NOTICIA', 'HEIDI', 'MODA', 'SANTAFE', 'MARCHA'];
+        const foundWords = new Set();
+        let selectedCells = [];
+        let isMouseDown = false;
+
+        const gridEl = document.getElementById('grid');
+
+        gridData.forEach((row, rIdx) => {
+            row.forEach((char, cIdx) => {
+                const cell = document.createElement('div');
+                cell.className = 'grid-cell';
+                cell.textContent = char;
+
+                cell.addEventListener('mousedown', () => startSelect(cell));
+                cell.addEventListener('mouseenter', () => enterSelect(cell));
+                cell.addEventListener('mouseup', endSelect);
+
+                gridEl.appendChild(cell);
+            });
+        });
+
+        document.addEventListener('mouseup', endSelect);
+
+        function startSelect(cell) {
+            isMouseDown = true;
+            clearSelection();
+            selectCell(cell);
+        }
+
+        function enterSelect(cell) {
+            if (isMouseDown) selectCell(cell);
+        }
+
+        function selectCell(cell) {
+            if (!cell.classList.contains('selected') && !cell.classList.contains('found')) {
+                cell.classList.add('selected');
+                selectedCells.push(cell);
+            }
+        }
+
+        function endSelect() {
+            if (!isMouseDown) return;
+            isMouseDown = false;
+
+            const selectedWord = selectedCells.map(c => c.textContent).join('');
+            const reversedWord = selectedWord.split('').reverse().join('');
+
+            let matched = null;
+            if (words.includes(selectedWord)) matched = selectedWord;
+            else if (words.includes(reversedWord)) matched = reversedWord;
+
+            if (matched && !foundWords.has(matched)) {
+                foundWords.add(matched);
+                selectedCells.forEach(c => {
+                    c.classList.remove('selected');
+                    c.classList.add('found');
+                });
+                const chip = document.querySelector(`.word-chip[data-word="${matched}"]`);
+                if (chip) chip.classList.add('found');
+
+                if (foundWords.size === words.length) {
+                    setTimeout(() => alert('¡Felicitaciones! Encontraste todas las palabras.'), 200);
+                }
+            } else {
+                clearSelection();
+            }
+            selectedCells = [];
+        }
+
+        function clearSelection() {
+            document.querySelectorAll('.grid-cell.selected').forEach(c => c.classList.remove('selected'));
+            selectedCells = [];
+        }
+    </script>
+</body>
+</html>
